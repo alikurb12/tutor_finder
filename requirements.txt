@@ -1,7 +1,12 @@
 annotated-types==0.8.0
 anyio==4.15.1
+bcrypt==5.0.0
+click==8.5.0
 fastapi==0.115.6
+h11==0.16.0
 idna==3.20
+psycopg==3.3.6
+psycopg-binary==3.3.6
 pydantic==2.14.1
 pydantic-settings==2.16.0
 pydantic_core==2.50.1
@@ -11,3 +16,4 @@ starlette==0.41.3
 typing-inspection==0.4.4
 typing_extensions==4.16.0
 uv==0.13.1
+uvicorn==0.54.0
