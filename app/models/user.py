@@ -1,8 +1,9 @@
 from sqlalchemy import String
-from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 from datetime import datetime, timezone
 
 from app.database.database import Base
+from app.models.tutor import Tutor
 
 
 class User(Base):
@@ -15,3 +16,5 @@ class User(Base):
     is_admin: Mapped[bool] = mapped_column(default=False)
     is_active: Mapped[bool] = mapped_column(default=True)
     created_at : Mapped[datetime] = mapped_column(default=datetime.now(timezone.utc))
+
+    tutor: Mapped["Tutor | None"] = relationship(back_populates="user")
